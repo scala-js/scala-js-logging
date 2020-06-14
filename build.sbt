@@ -1,8 +1,8 @@
-val previousVersion: Option[String] = Some("1.1.0")
+val previousVersion: Option[String] = Some("1.1.1")
 val newScalaBinaryVersionsInThisRelease: Set[String] = Set()
 
 inThisBuild(Def.settings(
-  version := "1.1.1",
+  version := "1.1.2-SNAPSHOT",
   organization := "org.scala-js",
   scalaVersion := "2.12.11",
   crossScalaVersions := Seq("2.11.12", "2.12.11", "2.13.2"),
