@@ -9,7 +9,7 @@ Normally you should receive the dependency on scalajs-logging through scalajs-li
 If you really want to use it somewhere else, add the following line to your settings:
 
 ```scala
-libraryDependencies += "org.scala-js" %% "scalajs-logging" % "1.1.1-SNAPSHOT"
+libraryDependencies += "org.scala-js" %% "scalajs-logging" % "1.1.1"
 ```
 
 ## Usage
