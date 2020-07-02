@@ -34,4 +34,4 @@ then give your logger instance to an API.
 
 Available severity levels are `Debug`, `Info`, `Warn` and `Error`.
 
-For more details, consult [the Scaladoc of scalajs-logging](https://javadoc.io/doc/org.scala-js/scalajs-logging_2.13/latest/org/scalajs/logging/).
+For more details, consult [the Scaladoc of scalajs-logging](https://javadoc.io/doc/org.scala-js/scalajs-logging_2.13/latest/org/scalajs/logging/index.html).
