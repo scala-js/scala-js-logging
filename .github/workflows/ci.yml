@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        scalaversion: ["2.11.12", "2.12.11", "2.13.2"]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: olafurpg/setup-scala@v10
+        with:
+          java-version: "adopt@1.8"
+      - uses: coursier/cache-action@v5
+      - name: Build
+        run: sbt "++${{ matrix.scalaversion }}" publishLocal
+      - name: MiMa
+        run: sbt "++${{ matrix.scalaversion }}" mimaReportBinaryIssues
+      - name: Header check
+        run: sbt "++${{ matrix.scalaversion }}" headerCheck
