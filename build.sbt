@@ -2,7 +2,6 @@ val previousVersion: Option[String] = Some("1.1.1")
 val newScalaBinaryVersionsInThisRelease: Set[String] = Set("3")
 
 inThisBuild(Def.settings(
-  version := "1.1.2-SNAPSHOT",
   organization := "org.scala-js",
   scalaVersion := "2.12.11",
   crossScalaVersions := Seq("2.11.12", "2.12.11", "2.13.2", "3.3.6"),
@@ -25,14 +24,6 @@ inThisBuild(Def.settings(
       Some("scm:git:git@github.com:scala-js/scala-js-logging.git"))),
 
   // Publishing
-  publishMavenStyle := true,
-  publishTo := {
-    val nexus = "https://oss.sonatype.org/"
-    if (version.value.endsWith("-SNAPSHOT"))
-      Some("snapshots" at nexus + "content/repositories/snapshots")
-    else
-      Some("releases" at nexus + "service/local/staging/deploy/maven2")
-  },
   pomExtra := (
     <developers>
       <developer>
